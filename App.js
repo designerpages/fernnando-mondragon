@@ -30,7 +30,7 @@ export default function App() {
     setError("");
     try {
       const response = await axios.get(
-        "https://crudcrud.com/api/29d1c180c0df498a90c5e3289d26f7ca/todo-list"
+        "https://crudcrud.com/api/a44a69aa729749a29b3fda6104dd059a/todo-list"
       );
       setItems(response.data);
     } catch (error) {
@@ -48,7 +48,7 @@ export default function App() {
     }
     const action = selectedItem ? "Update" : "Create";
     try {
-      const url = `https://crudcrud.com/api/29d1c180c0df498a90c5e3289d26f7ca/todo-list${
+      const url = `https://crudcrud.com/api/a44a69aa729749a29b3fda6104dd059a/todo-list${
         selectedItem ? `/${selectedItem._id}` : ""
       }`;
       const method = selectedItem ? "put" : "post";
@@ -69,7 +69,7 @@ export default function App() {
   const handleDelete = async (id) => {
     try {
       await axios.delete(
-        `https://crudcrud.com/api/29d1c180c0df498a90c5e3289d26f7ca/todo-list/${id}`
+        `https://crudcrud.com/api/a44a69aa729749a29b3fda6104dd059a/todo-list/${id}`
       );
       fetchItems();
     } catch (error) {
